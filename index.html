@@ -9,18 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* PALETA DE COLORES: Verde Inglés, Dorado Viejo y Crema */
         :root {
-            --bg-color: #f4f1ea; /* Crema papel antiguo */
-            --text-primary: #1a2e22; /* Verde muy oscuro (casi negro) */
+            --bg-color: #f4f1ea;
+            --text-primary: #1a2e22;
             --text-secondary: #4a5d50;
-            --accent-green: #1B4D3E; /* Verde Inglés / Racing Green */
-            --accent-gold: #C5A059; /* Dorado viejo para detalles */
-            --card-bg: rgba(255, 255, 255, 0.9); /* Blanco con transparencia */
+            --accent-green: #1B4D3E;
+            --accent-gold: #C5A059;
+            --card-bg: rgba(255, 255, 255, 0.9);
         }
 
         body {
-            font-family: 'Montserrat', sans-serif; /* Cuerpo moderno */
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.8;
             color: var(--text-primary);
             background-color: var(--bg-color);
@@ -29,38 +28,52 @@
             overflow-x: hidden;
         }
 
-        /* FONDO DINÁMICO (CANVAS) */
         #canvas-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Se queda atrás de todo */
-            opacity: 0.4; /* Sutil para no distraer */
+            z-index: -1;
+            opacity: 0.4;
         }
 
-        /* TIPOGRAFÍA */
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif; /* Títulos elegantes */
-            font-weight: 700;
-            color: var(--accent-green);
-        }
-
-        /* LAYOUT */
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
-            position: relative; /* Para estar sobre el canvas */
+            position: relative;
         }
 
-        /* HEADER */
+        /* HEADER & FOTO DE PERFIL */
         header {
             text-align: center;
-            padding: 80px 0 40px;
+            padding: 60px 0 40px; /* Reduje un poco el padding superior */
             border-bottom: 2px solid var(--accent-gold);
             margin-bottom: 40px;
+        }
+
+        /* ESTILO NUEVO PARA LA FOTO */
+        .profile-img {
+            width: 160px; /* Tamaño de la foto */
+            height: 160px;
+            object-fit: cover; /* Evita que la foto se estire/deforme */
+            border-radius: 50%; /* La hace circular */
+            border: 4px solid var(--accent-gold); /* Borde elegante */
+            box-shadow: 0 8px 20px rgba(27, 77, 62, 0.2); /* Sombra suave */
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05); /* Efecto zoom sutil al pasar el mouse */
+            border-color: var(--accent-green);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--accent-green);
         }
 
         h1 {
@@ -78,7 +91,6 @@
             text-transform: uppercase;
         }
 
-        /* NAVEGACIÓN */
         nav {
             margin-top: 30px;
             display: flex;
@@ -110,29 +122,23 @@
 
         nav a:hover {
             color: var(--accent-gold);
+            width: 100%;
         }
-
+        
         nav a:hover::after {
             width: 100%;
         }
 
-        /* SECCIONES */
         section {
             background: var(--card-bg);
             padding: 40px;
             margin-bottom: 40px;
-            border-radius: 4px; /* Bordes poco redondeados, más serio */
+            border-radius: 4px;
             border: 1px solid rgba(27, 77, 62, 0.1);
-            backdrop-filter: blur(5px); /* Efecto vidrio esmerilado */
+            backdrop-filter: blur(5px);
             box-shadow: 0 4px 20px rgba(27, 77, 62, 0.05);
         }
 
-        .about-text p {
-            font-size: 1.05rem;
-            text-align: justify;
-        }
-
-        /* PROYECTOS */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -156,9 +162,7 @@
             font-size: 1.4rem;
         }
 
-        .tags {
-            margin: 15px 0;
-        }
+        .tags { margin: 15px 0; }
 
         .tag {
             display: inline-block;
@@ -183,16 +187,8 @@
             font-style: italic;
         }
 
-        .btn-link:hover {
-            color: var(--accent-green);
-        }
+        .music-section { border-left: 4px solid var(--accent-gold); }
 
-        /* MÚSICA */
-        .music-section {
-            border-left: 4px solid var(--accent-gold);
-        }
-
-        /* FOOTER */
         footer {
             text-align: center;
             font-size: 0.9rem;
@@ -201,7 +197,6 @@
             font-family: 'Playfair Display', serif;
             font-style: italic;
         }
-
     </style>
 </head>
 <body>
@@ -211,6 +206,8 @@
     <div class="container">
         
         <header>
+            <img src="perfil.jpg" alt="Eduardo Olivares" class="profile-img">
+            
             <h1>Eduardo Olivares</h1>
             <div class="subtitle">Abogado | Ingeniero Financiero | Pianista</div>
             
@@ -222,7 +219,7 @@
             </nav>
         </header>
 
-        <section id="about" class="about-text">
+        <section id="about">
             <h2 style="text-align: center; margin-bottom: 30px;">Perfil Multidisciplinario</h2>
             <p>
                 La incertidumbre es el enemigo común en los tribunales y en los mercados financieros. Mi carrera es una respuesta híbrida a ese desafío.
@@ -293,7 +290,6 @@
         const ctx = canvas.getContext('2d');
         let particlesArray;
 
-        // Ajustar tamaño del canvas
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
@@ -303,21 +299,18 @@
             init();
         });
 
-        // Clase Partícula
         class Particle {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1; // Puntos pequeños
-                this.speedX = (Math.random() * 1.5 - 0.75); // Lento
+                this.size = Math.random() * 2 + 1;
+                this.speedX = (Math.random() * 1.5 - 0.75);
                 this.speedY = (Math.random() * 1.5 - 0.75);
-                this.color = '#1B4D3E'; // Verde Inglés
+                this.color = '#1B4D3E';
             }
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
-
-                // Rebotar en bordes
                 if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
                 if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
             }
@@ -331,7 +324,7 @@
 
         function init() {
             particlesArray = [];
-            let numberOfParticles = (canvas.height * canvas.width) / 9000; // Densidad
+            let numberOfParticles = (canvas.height * canvas.width) / 9000;
             for (let i = 0; i < numberOfParticles; i++) {
                 particlesArray.push(new Particle());
             }
@@ -340,7 +333,6 @@
         function animate() {
             requestAnimationFrame(animate);
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
             for (let i = 0; i < particlesArray.length; i++) {
                 particlesArray[i].update();
                 particlesArray[i].draw();
@@ -348,17 +340,15 @@
             connect();
         }
 
-        // Conectar puntos con líneas (Efecto Red Neuronal/Correlación)
         function connect() {
             let opacityValue = 1;
             for (let a = 0; a < particlesArray.length; a++) {
                 for (let b = a; b < particlesArray.length; b++) {
                     let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + 
                                    ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
-                    
                     if (distance < (canvas.width/7) * (canvas.height/7)) {
                         opacityValue = 1 - (distance/20000);
-                        ctx.strokeStyle = 'rgba(27, 77, 62,' + opacityValue + ')'; // Líneas verdes tenues
+                        ctx.strokeStyle = 'rgba(27, 77, 62,' + opacityValue + ')';
                         ctx.lineWidth = 1;
                         ctx.beginPath();
                         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -368,7 +358,6 @@
                 }
             }
         }
-
         init();
         animate();
     </script>
