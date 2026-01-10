@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* ESTILOS (Misma identidad visual) */
+        /* MISMOS ESTILOS BASE PARA MANTENER IDENTIDAD */
         :root {
             --bg-color: #f0f2f5;
             --accent-green: #0f3d2e;
@@ -16,19 +16,21 @@
             --text-primary: #1a2e22;
         }
         body { font-family: 'Montserrat', sans-serif; background: var(--bg-color); color: var(--text-primary); margin: 0; }
+        
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
         
-        /* HEADER */
-        header { text-align: center; margin-bottom: 40px; }
+        /* HEADER SIMPLIFICADO */
+        header { text-align: center; margin-bottom: 50px; }
         h1 { font-family: 'Playfair Display', serif; color: var(--accent-green); font-size: 2.5rem; }
         
+        /* BOTÓN DE REGRESO (IMPORTANTE EN NAVEGACIÓN) */
         .back-btn {
             display: inline-block; text-decoration: none; color: var(--text-primary);
             margin-bottom: 20px; font-weight: 600; transition: color 0.3s;
         }
         .back-btn:hover { color: var(--accent-gold); }
 
-        /* PESTAÑAS (TABS) */
+        /* SISTEMA DE PESTAÑAS (TABS) TIPO CARPETA */
         .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
         
         .tab-btn {
@@ -39,7 +41,7 @@
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             font-size: 1rem;
-            border-radius: 8px 8px 0 0;
+            border-radius: 8px 8px 0 0; /* Redondeado solo arriba */
             color: #666;
             transition: all 0.3s;
         }
@@ -51,16 +53,17 @@
             box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
         }
 
-        /* CONTENIDO */
+        /* CONTENIDO DE LAS CARPETAS */
         .folder-content {
             background: white;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            display: none;
+            display: none; /* Oculto por defecto */
             animation: fadeIn 0.5s;
         }
-        .folder-content.active { display: block; }
+        
+        .folder-content.active { display: block; } /* Mostrar si está activo */
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -71,13 +74,14 @@
             padding: 15px; border-bottom: 1px solid #eee; transition: background 0.2s;
         }
         .file-item:hover { background: #f9f9f9; }
-        .file-name { font-weight: 600; display: flex; align-items: center; gap: 10px; }
         
+        .file-name { font-weight: 600; display: flex; align-items: center; gap: 10px; }
         .file-link {
             text-decoration: none; color: white; background: var(--accent-green);
             padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;
         }
         .file-link:hover { background: var(--accent-gold); }
+
     </style>
 </head>
 <body>
@@ -87,71 +91,62 @@
         
         <header>
             <h1>Expediente de Credenciales</h1>
-            <p>Documentación técnica y certificaciones.</p>
+            <p>Repositorio digital de certificaciones organizado por áreas de competencia.</p>
         </header>
 
         <div class="tabs">
-            <button class="tab-btn active" onclick="openFolder('a2')">📂 Certificados A2</button>
-            <button class="tab-btn" onclick="openFolder('anahuac')">🎓 Anáhuac</button>
-            <button class="tab-btn" onclick="openFolder('musica')">🎹 Música</button>
+            <button class="tab-btn active" onclick="openFolder('finanzas')">💰 Finanzas & Quant</button>
+            <button class="tab-btn" onclick="openFolder('datos')">📊 Ciencia de Datos</button>
+            <button class="tab-btn" onclick="openFolder('derecho')">⚖️ Derecho & Legal</button>
+            <button class="tab-btn" onclick="openFolder('arte')">🎹 Arte & Música</button>
         </div>
 
-        <div id="a2" class="folder-content active">
-            <h2><i class="fas fa-file-code"></i> Certificados A2 (Master Courses)</h2>
-            <p>Especialización técnica en herramientas de análisis y programación.</p>
+        <div id="finanzas" class="folder-content active">
+            <h2><i class="fas fa-chart-line"></i> Certificaciones Financieras</h2>
             <ul class="file-list">
-                
                 <li class="file-item">
-                    <span class="file-name"><i class="far fa-file-pdf"></i> Excel Black Belt</span>
-                    <a href="assets/certificados_a2/excel.pdf" target="_blank" class="file-link">Ver PDF</a>
+                    <span class="file-name"><i class="far fa-file-pdf"></i> Análisis Financiero - Anáhuac</span>
+                    <a href="assets/certificados/finanzas/cert_anahuac.pdf" target="_blank" class="file-link">Ver Documento</a>
                 </li>
-
                 <li class="file-item">
-                    <span class="file-name"><i class="far fa-file-pdf"></i> Power BI Master</span>
-                    <a href="assets/certificados_a2/powerbi.pdf" target="_blank" class="file-link">Ver PDF</a>
+                    <span class="file-name"><i class="far fa-file-pdf"></i> Taller Black-Scholes</span>
+                    <a href="#" class="file-link">Ver Documento</a>
                 </li>
-                
-                <li class="file-item">
-                    <span class="file-name"><i class="far fa-file-pdf"></i> SQL & Python</span>
-                    <a href="assets/certificados_a2/sql_python.pdf" target="_blank" class="file-link">Ver PDF</a>
-                </li>
-
             </ul>
         </div>
 
-        <div id="anahuac" class="folder-content">
-            <h2><i class="fas fa-university"></i> Certificaciones Anáhuac</h2>
-            <p>Diplomados universitarios y formación continua.</p>
+        <div id="datos" class="folder-content">
+            <h2><i class="fas fa-database"></i> Ciencia de Datos & Tech</h2>
             <ul class="file-list">
-                
                 <li class="file-item">
-                    <span class="file-name"><i class="far fa-file-pdf"></i> Ciencia de Datos en Marketing</span>
-                    <a href="assets/anahuac/data_marketing.pdf" target="_blank" class="file-link">Ver PDF</a>
+                    <span class="file-name"><i class="far fa-file-pdf"></i> Java Master Course</span>
+                    <a href="assets/certificados/datos/java_master.pdf" target="_blank" class="file-link">Ver Documento</a>
                 </li>
-
                 <li class="file-item">
-                    <span class="file-name"><i class="far fa-file-pdf"></i> Análisis Financiero</span>
-                    <a href="assets/anahuac/analisis_financiero.pdf" target="_blank" class="file-link">Ver PDF</a>
+                    <span class="file-name"><i class="far fa-file-pdf"></i> Data Science Marketing</span>
+                    <a href="#" class="file-link">Ver Documento</a>
                 </li>
-
             </ul>
         </div>
 
-        <div id="musica" class="folder-content">
-            <h2><i class="fas fa-music"></i> Trayectoria Musical</h2>
-            <p>Certificaciones del Instituto Fermatta y reconocimientos.</p>
+        <div id="derecho" class="folder-content">
+            <h2><i class="fas fa-balance-scale"></i> Documentación Legal</h2>
+            <p>Licenciatura y diplomados en marco normativo.</p>
             <ul class="file-list">
-                
                 <li class="file-item">
-                    <span class="file-name"><i class="far fa-file-image"></i> Certificado Fermatta</span>
-                    <a href="assets/musica/fermatta.pdf" target="_blank" class="file-link">Ver Documento</a>
+                    <span class="file-name"><i class="far fa-file-pdf"></i> Título Licenciatura en Derecho</span>
+                    <a href="#" class="file-link">Ver Documento</a>
                 </li>
+            </ul>
+        </div>
 
+        <div id="arte" class="folder-content">
+            <h2><i class="fas fa-music"></i> Reconocimientos Artísticos</h2>
+            <ul class="file-list">
                 <li class="file-item">
-                    <span class="file-name"><i class="far fa-file-image"></i> Reconocimiento Piano</span>
-                    <a href="assets/musica/piano_rec.pdf" target="_blank" class="file-link">Ver Documento</a>
+                    <span class="file-name"><i class="far fa-file-image"></i> Concierto Instituto Fermatta (Foto)</span>
+                    <a href="assets/fotos/arte/concierto.jpg" target="_blank" class="file-link">Ver Foto</a>
                 </li>
-
             </ul>
         </div>
 
@@ -159,16 +154,21 @@
 
     <script>
         function openFolder(folderName) {
+            // Ocultar todos los contenidos
             var i, content, tablinks;
             content = document.getElementsByClassName("folder-content");
             for (i = 0; i < content.length; i++) {
                 content[i].style.display = "none";
                 content[i].classList.remove("active");
             }
+
+            // Desactivar todos los botones
             tablinks = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
+
+            // Mostrar el actual y activar botón
             document.getElementById(folderName).style.display = "block";
             document.getElementById(folderName).classList.add("active");
             event.currentTarget.className += " active";
