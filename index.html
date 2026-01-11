@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Olivares | Quant Developer & Legal Strategist</title>
+    <title>EOlivares | Quant Developer & Legal Strategist</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /* --- VARIABLES Y COLORES --- */
         :root {
-            --bg-color: #f0f2f5;
+            --bg-color: #f4f6f8;
             --paper-color: #ffffff;
             --text-primary: #1a2e22;
             --text-secondary: #5e6d64;
-            --accent-green: #0f3d2e;
-            --accent-gold: #cfaa6e;
-            --tag-bg: rgba(15, 61, 46, 0.08);
-            --shadow-hover: 0 15px 40px rgba(15, 61, 46, 0.15);
+            --accent-green: #0f3d2e; /* Verde Institucional */
+            --accent-gold: #cfaa6e;  /* Dorado Elegante */
+            --tag-bg: rgba(15, 61, 46, 0.05);
+            --shadow-hover: 0 15px 40px rgba(15, 61, 46, 0.12);
         }
 
         /* --- ESTILOS GENERALES --- */
@@ -29,7 +29,7 @@
             margin: 0; padding: 0; overflow-x: hidden;
         }
 
-        #canvas-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.3; }
+        #canvas-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.4; }
         .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
 
         /* --- HEADER --- */
@@ -56,12 +56,12 @@
         /* --- BOTÓN DESCARGA CV --- */
         .cv-download-btn {
             display: inline-block; margin-top: 25px;
-            background-color: var(--accent-green); color: white; padding: 12px 25px; 
+            background-color: var(--accent-green); color: white; padding: 12px 28px; 
             text-decoration: none; border-radius: 30px; font-weight: 600; 
             font-family: 'Montserrat', sans-serif; font-size: 0.9rem; 
-            box-shadow: 0 4px 15px rgba(15, 61, 46, 0.3); transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 4px 15px rgba(15, 61, 46, 0.3); transition: all 0.3s;
         }
-        .cv-download-btn:hover { transform: translateY(-3px); background-color: #0a291f; }
+        .cv-download-btn:hover { transform: translateY(-3px); background-color: #0a291f; box-shadow: 0 6px 20px rgba(15, 61, 46, 0.4); }
 
         /* --- SECCIONES --- */
         section { background: var(--paper-color); padding: 50px; margin-bottom: 40px; border-radius: 12px; border-top: 5px solid var(--accent-gold); box-shadow: 0 5px 20px rgba(0,0,0,0.03); }
@@ -101,11 +101,13 @@
         
         .card-desc { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; flex-grow: 1; text-align: justify; }
         
+        /* Estilos de Iconos en Tags */
         .tags { margin-top: auto; padding-top: 15px; border-top: 1px solid #f0f0f0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;}
         .tag { 
-            font-size: 0.7rem; background: var(--tag-bg); color: var(--accent-green); 
-            padding: 4px 10px; border-radius: 4px; font-weight: 600; 
+            font-size: 0.75rem; background: var(--tag-bg); color: var(--accent-green); 
+            padding: 5px 12px; border-radius: 4px; font-weight: 600; display: flex; align-items: center; gap: 6px;
         }
+        .tag i { font-size: 0.9rem; } /* Tamaño del icono dentro del tag */
         
         .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; }
         .btn-code { text-decoration: none; color: var(--accent-gold); font-weight: 700; font-size: 0.9rem; transition: color 0.2s; display: flex; align-items: center; gap: 5px; }
@@ -143,7 +145,7 @@
                 <a href="#about">Bio</a>
                 <a href="#projects">Catálogo Técnico</a>
                 <a href="credenciales.html">Credenciales</a>
-                <a href="https://github.com/olivareseduardo38655-creator" target="_blank">
+                <a href="https://github.com/EOlivaresQuantDev" target="_blank">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </nav>
@@ -171,214 +173,304 @@
         <section id="projects">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
                 <h2><i class="fas fa-layer-group"></i> Catálogo Técnico (30 Proyectos)</h2>
-                <a href="https://github.com/olivareseduardo38655-creator?tab=repositories" target="_blank" style="background: var(--text-primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: 600; font-size: 0.9rem;">
+                <a href="https://github.com/EOlivaresQuantDev?tab=repositories" target="_blank" style="background: var(--text-primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: 600; font-size: 0.9rem;">
                     <i class="fab fa-github"></i> Ver Todos los Repositorios
                 </a>
             </div>
 
             <div class="filter-container">
                 <button class="filter-btn active" onclick="filterProjects('all')">Todos</button>
-                <button class="filter-btn" onclick="filterProjects('data')">🟩 Data Science</button>
-                <button class="filter-btn" onclick="filterProjects('bi')">🟦 BI & Analytics</button>
-                <button class="filter-btn" onclick="filterProjects('math')">🟨 Math & R</button>
-                <button class="filter-btn" onclick="filterProjects('gov')">🟧 Data Gov</button>
-                <button class="filter-btn" onclick="filterProjects('java')">🟥 Java Eng</button>
-                <button class="filter-btn" onclick="filterProjects('quant')">🟦 Quant Dev</button>
+                <button class="filter-btn" onclick="filterProjects('data')"><i class="fab fa-python"></i> Data Science</button>
+                <button class="filter-btn" onclick="filterProjects('bi')"><i class="fas fa-chart-pie"></i> BI & Analytics</button>
+                <button class="filter-btn" onclick="filterProjects('math')"><i class="fas fa-square-root-alt"></i> Math & R</button>
+                <button class="filter-btn" onclick="filterProjects('gov')"><i class="fas fa-balance-scale"></i> Data Gov</button>
+                <button class="filter-btn" onclick="filterProjects('java')"><i class="fab fa-java"></i> Java Eng</button>
+                <button class="filter-btn" onclick="filterProjects('quant')"><i class="fas fa-chart-line"></i> Quant Dev</button>
             </div>
 
             <div class="project-grid">
 
                 <div class="project-card" data-category="data">
                     <h3>EDA Multifuente Avanzado</h3>
-                    <p class="card-desc">Pipeline de ingesta y limpieza de datos estructurados y no estructurados provenientes de APIs y SQL, optimizando la detección de outliers para modelado.</p>
-                    <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Pipeline de ingesta y limpieza de datos estructurados y no estructurados provenientes de APIs y SQL, optimizando la detección de outliers.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag"><i class="fas fa-database"></i> SQL</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="data">
                     <h3>Clasificación Supervisada (ROC/AUC)</h3>
-                    <p class="card-desc">Implementación de algoritmos (SVM, Random Forest) con validación cruzada y evaluación rigurosa mediante matrices de confusión y curvas ROC.</p>
-                    <div class="tags"><span class="tag">Scikit-Learn</span><span class="tag">ML</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Implementación de algoritmos (SVM, Random Forest) con validación cruzada y evaluación rigurosa mediante matrices de confusión.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-python"></i> Scikit-Learn</span>
+                        <span class="tag"><i class="fas fa-brain"></i> ML</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="data">
                     <h3>Pipeline Feature Engineering</h3>
-                    <p class="card-desc">Automatización de la transformación de variables (One-Hot Encoding, Scaling) para optimizar la convergencia de modelos predictivos en producción.</p>
-                    <div class="tags"><span class="tag">Python</span><span class="tag">ETL</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Automatización de la transformación de variables (One-Hot Encoding, Scaling) para optimizar la convergencia de modelos en producción.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag"><i class="fas fa-cogs"></i> ETL</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="data">
                     <h3>Regresión Financiera Regularizada</h3>
-                    <p class="card-desc">Modelado predictivo de precios de activos utilizando regresiones Lasso y Ridge para mitigar el sobreajuste en datasets con alta colinealidad.</p>
-                    <div class="tags"><span class="tag">Statsmodels</span><span class="tag">Finance</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Modelado predictivo de precios de activos utilizando regresiones Lasso y Ridge para mitigar sobreajuste en datasets colineales.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-python"></i> Statsmodels</span>
+                        <span class="tag"><i class="fas fa-chart-line"></i> Finance</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="data">
                     <h3>Segmentación de Clientes (K-Means)</h3>
-                    <p class="card-desc">Aplicación de algoritmos de clustering no supervisado para identificar perfiles transaccionales y optimizar estrategias de marketing dirigido.</p>
-                    <div class="tags"><span class="tag">Clustering</span><span class="tag">Unsupervised</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Aplicación de algoritmos de clustering no supervisado para identificar perfiles transaccionales y optimizar estrategias.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag"><i class="fas fa-users"></i> Clustering</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="data">
                     <h3>Métricas de Negocio KPI</h3>
                     <p class="card-desc">Cálculo programático de indicadores clave (CAC, LTV) transformando datos crudos en insights accionables para la dirección.</p>
-                    <div class="tags"><span class="tag">Analytics</span><span class="tag">Business</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-chart-bar"></i> Analytics</span>
+                        <span class="tag"><i class="fas fa-briefcase"></i> Business</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="data">
                     <h3>Forecasting Series Temporales</h3>
                     <p class="card-desc">Desarrollo de modelos base para la proyección de demanda y ventas estacionales utilizando técnicas de suavizado exponencial.</p>
-                    <div class="tags"><span class="tag">Time Series</span><span class="tag">Python</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-python"></i> Time Series</span>
+                        <span class="tag"><i class="fas fa-clock"></i> Forecasting</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="math">
                     <h3>Econometría Avanzada en R</h3>
-                    <p class="card-desc">Análisis de series financieras con volatilidad condicional (modelos GARCH) y pruebas de estacionariedad (Dickey-Fuller) en R.</p>
-                    <div class="tags"><span class="tag">R Studio</span><span class="tag">Econometrics</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Análisis de series financieras con volatilidad condicional (GARCH) y pruebas de estacionariedad (Dickey-Fuller) en R.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-r-project"></i> R Studio</span>
+                        <span class="tag"><i class="fas fa-calculator"></i> Econometrics</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="math">
                     <h3>Inferencia Estadística y ANOVA</h3>
-                    <p class="card-desc">Ejecución de contrastes de hipótesis paramétricos y no paramétricos para validación de resultados experimentales A/B testing.</p>
-                    <div class="tags"><span class="tag">R Lang</span><span class="tag">Statistics</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Ejecución de contrastes de hipótesis paramétricos y no paramétricos para validación de resultados experimentales.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-r-project"></i> R Lang</span>
+                        <span class="tag"><i class="fas fa-vial"></i> Statistics</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="bi">
                     <h3>Dashboard Decisional Power BI</h3>
-                    <p class="card-desc">Arquitectura de Business Intelligence conectada a DW para monitoreo en tiempo real de la salud operativa de la empresa.</p>
-                    <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Arquitectura de BI conectada a Data Warehouse para monitoreo en tiempo real de la salud operativa de la empresa.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-chart-pie"></i> Power BI</span>
+                        <span class="tag"><i class="fas fa-code"></i> DAX</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
 
                 <div class="project-card" data-category="bi">
                     <h3>Churn Prediction & XAI</h3>
-                    <p class="card-desc">Integración Python-Power BI para predecir fuga de clientes, visualizando la explicabilidad del modelo (SHAP values) para usuarios de negocio.</p>
-                    <div class="tags"><span class="tag">XAI</span><span class="tag">Python</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Integración Python-Power BI para predecir fuga de clientes, visualizando la explicabilidad del modelo (SHAP values).</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-chart-pie"></i> Power BI</span>
+                        <span class="tag"><i class="fab fa-python"></i> Python</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="bi">
                     <h3>Analítica Prescriptiva</h3>
-                    <p class="card-desc">Sistema de recomendación que no solo predice riesgos, sino que sugiere acciones automatizadas para maximizar la retención.</p>
-                    <div class="tags"><span class="tag">Strategy</span><span class="tag">Optimization</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Sistema de recomendación que predice riesgos y sugiere acciones automatizadas para maximizar la retención.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-chess"></i> Strategy</span>
+                        <span class="tag"><i class="fas fa-search-dollar"></i> Optimization</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="bi">
                     <h3>ML Integration en BI</h3>
                     <p class="card-desc">Implementación de modelos de Machine Learning nativos dentro del flujo de datos de Power BI Service (AutoML).</p>
-                    <div class="tags"><span class="tag">AutoML</span><span class="tag">Cloud</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-robot"></i> AutoML</span>
+                        <span class="tag"><i class="fas fa-cloud"></i> Cloud</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="bi">
                     <h3>Visual Analytics de Riesgo</h3>
                     <p class="card-desc">Tableros de control ejecutivos diseñados para la vigilancia de exposición al riesgo de mercado y crédito.</p>
-                    <div class="tags"><span class="tag">Risk Mgt</span><span class="tag">Reporting</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-shield-alt"></i> Risk Mgt</span>
+                        <span class="tag"><i class="fas fa-file-alt"></i> Reporting</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="bi">
                     <h3>Pipeline End-to-End Corporativo</h3>
                     <p class="card-desc">Orquestación completa del flujo de datos: extracción ETL, modelado en estrella y visualización front-end.</p>
-                    <div class="tags"><span class="tag">Architecture</span><span class="tag">Data Warehousing</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-project-diagram"></i> Architecture</span>
+                        <span class="tag"><i class="fas fa-server"></i> DW</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
 
                 <div class="project-card" data-category="math quant">
                     <h3>Optimización Convexa de Portafolios</h3>
-                    <p class="card-desc">Minimización de varianza y maximización de Sharpe Ratio utilizando solucionadores cuadráticos en Python (cvxpy/SciPy).</p>
-                    <div class="tags"><span class="tag">Python</span><span class="tag">SciPy</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Minimización de varianza y maximización de Sharpe Ratio utilizando solucionadores cuadráticos en Python (cvxpy).</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag"><i class="fas fa-square-root-alt"></i> SciPy</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="math java">
                     <h3>Implementación Métodos Numéricos</h3>
                     <p class="card-desc">Desarrollo desde cero de algoritmos de Newton-Raphson y descomposición de matrices LU sin librerías externas.</p>
-                    <div class="tags"><span class="tag">Java</span><span class="tag">Algorithms</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="tag"><i class="fas fa-laptop-code"></i> Algorithms</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="math">
-                    <h3>Simulación de Caos y Sistemas Dinámicos</h3>
-                    <p class="card-desc">Modelado computacional de ecuaciones diferenciales no lineales para estudiar sensibilidad a condiciones iniciales en mercados.</p>
-                    <div class="tags"><span class="tag">Simulation</span><span class="tag">Chaos Theory</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <h3>Simulación de Caos y Sistemas</h3>
+                    <p class="card-desc">Modelado computacional de ecuaciones diferenciales no lineales para estudiar sensibilidad a condiciones iniciales.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-wave-square"></i> Simulation</span>
+                        <span class="tag"><i class="fas fa-infinity"></i> Chaos Theory</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
 
                 <div class="project-card" data-category="gov">
-                    <h3>Data Quality & Governance Framework</h3>
-                    <p class="card-desc">Framework integral para validación de dimensiones de calidad (completitud, unicidad) asegurando la integridad del dato financiero.</p>
-                    <div class="tags"><span class="tag">Python</span><span class="tag">DAMA-DMBOK</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <h3>Data Quality & Governance</h3>
+                    <p class="card-desc">Framework integral para validación de dimensiones de calidad (completitud, unicidad) asegurando la integridad del dato.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag"><i class="fas fa-check-double"></i> DQ</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="gov">
                     <h3>Auditoría Regulatoria (BCBS 239)</h3>
                     <p class="card-desc">Sistema automatizado de compliance para la agregación de datos de riesgo, generando reportes de linaje y trazabilidad.</p>
-                    <div class="tags"><span class="tag">LegalTech</span><span class="tag">Compliance</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-balance-scale"></i> LegalTech</span>
+                        <span class="tag"><i class="fas fa-clipboard-check"></i> Compliance</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
 
                 <div class="project-card" data-category="java">
                     <h3>Procesamiento Transaccional</h3>
                     <p class="card-desc">Backend en Java diseñado para la ingesta masiva y validación de transacciones financieras con manejo robusto de excepciones.</p>
-                    <div class="tags"><span class="tag">Java OOP</span><span class="tag">Backend</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-java"></i> Java OOP</span>
+                        <span class="tag"><i class="fas fa-server"></i> Backend</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="java math">
                     <h3>Motor de Precisión Numérica</h3>
                     <p class="card-desc">Librería customizada utilizando `BigDecimal` para cálculos monetarios sin errores de punto flotante (IEEE 754).</p>
-                    <div class="tags"><span class="tag">Java</span><span class="tag">Precision</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="tag"><i class="fas fa-coins"></i> Precision</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="java">
                     <h3>Sistema Concurrente Multihilo</h3>
-                    <p class="card-desc">Implementación de `ExecutorService` y `Futures` para procesamiento paralelo de grandes volúmenes de datos, reduciendo latencia.</p>
-                    <div class="tags"><span class="tag">Concurrency</span><span class="tag">Threads</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Implementación de `ExecutorService` y `Futures` para procesamiento paralelo de grandes volúmenes de datos.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-network-wired"></i> Concurrency</span>
+                        <span class="tag"><i class="fas fa-microchip"></i> Threads</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="java">
                     <h3>Arquitectura Backend Modular</h3>
                     <p class="card-desc">Diseño de software desacoplado aplicando patrones de diseño (Factory, Singleton) para escalabilidad de servicios analíticos.</p>
-                    <div class="tags"><span class="tag">Design Patterns</span><span class="tag">Architecture</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-layer-group"></i> Patterns</span>
+                        <span class="tag"><i class="fas fa-archway"></i> Architecture</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="java data">
                     <h3>Integración Híbrida Java-Python</h3>
-                    <p class="card-desc">Interoperabilidad entre backend Java de alto rendimiento y scripts de Python para análisis estadístico avanzado vía procesos de sistema.</p>
-                    <div class="tags"><span class="tag">Interoperability</span><span class="tag">Fullstack</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Interoperabilidad entre backend Java de alto rendimiento y scripts de Python para análisis estadístico avanzado.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="tag"><i class="fab fa-python"></i> Python</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
 
                 <div class="project-card" data-category="quant java">
                     <h3>Motor Pricing Black-Scholes</h3>
-                    <p class="card-desc">Implementación algorítmica del modelo Black-Scholes-Merton para la valuación precisa de opciones europeas y cálculo de 'Griegas'.</p>
-                    <div class="tags"><span class="tag">Quant</span><span class="tag">Derivatives</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Implementación algorítmica del modelo Black-Scholes-Merton para la valuación precisa de opciones europeas y Griegas.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-chart-line"></i> Quant</span>
+                        <span class="tag"><i class="fas fa-superscript"></i> Derivatives</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="quant java">
                     <h3>Simulación Monte Carlo Multihilo</h3>
-                    <p class="card-desc">Motor estocástico de alto rendimiento para simular millones de escenarios de precios de activos y valorar opciones exóticas.</p>
-                    <div class="tags"><span class="tag">Stochastic</span><span class="tag">Risk</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Motor estocástico de alto rendimiento para simular millones de escenarios de precios de activos y valorar opciones.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-random"></i> Stochastic</span>
+                        <span class="tag"><i class="fas fa-exclamation-triangle"></i> Risk</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="quant math">
                     <h3>Optimización Cuantitativa Discreta</h3>
                     <p class="card-desc">Solución a problemas de asignación de activos bajo restricciones presupuestarias y de riesgo mediante programación entera.</p>
-                    <div class="tags"><span class="tag">Optimization</span><span class="tag">OR</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-search-dollar"></i> Optimization</span>
+                        <span class="tag"><i class="fas fa-calculator"></i> OR</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="quant">
                     <h3>Modelado de Procesos Estocásticos</h3>
-                    <p class="card-desc">Simulación numérica del Movimiento Browniano Geométrico (GBM) y procesos de reversión a la media para proyecciones financieras.</p>
-                    <div class="tags"><span class="tag">Math Fin</span><span class="tag">Modeling</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc">Simulación numérica del Movimiento Browniano Geométrico (GBM) y procesos de reversión a la media.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-subscript"></i> Math Fin</span>
+                        <span class="tag"><i class="fas fa-project-diagram"></i> Modeling</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
                 <div class="project-card" data-category="quant java">
                     <h3>Risk Engine (Capstone)</h3>
-                    <p class="card-desc"><strong>Sistema Integral:</strong> Plataforma que unifica pricing, simulación de escenarios y cálculo de VaR (Value at Risk) con arquitectura robusta.</p>
-                    <div class="tags"><span class="tag">Risk Engine</span><span class="tag">Java</span></div>
-                    <div class="card-footer"><a href="https://github.com/olivareseduardo38655-creator" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
+                    <p class="card-desc"><strong>Sistema Integral:</strong> Plataforma que unifica pricing, simulación de escenarios y cálculo de VaR (Value at Risk).</p>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-engine"></i> Risk Engine</span>
+                        <span class="tag"><i class="fab fa-java"></i> Java</span>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/EOlivaresQuantDev" target="_blank" class="btn-code"><i class="fas fa-code"></i> Ver Código</a></div>
                 </div>
 
             </div>
         </section>
 
         <footer>
-            &copy; 2026 Eduardo Olivares. <br>
+            &copy; 2026 Eduardo Olivares.<br>
             Construido con mentalidad Senior y código limpio.
         </footer>
     </div>
@@ -390,8 +482,8 @@
             let buttons = document.querySelectorAll('.filter-btn');
 
             buttons.forEach(btn => btn.classList.remove('active'));
-            if(event && event.target) {
-                event.target.classList.add('active');
+            if(event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
             }
 
             cards.forEach(card => {
